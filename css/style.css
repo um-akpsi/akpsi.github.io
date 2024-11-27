@@ -17,6 +17,7 @@ a.btn, .btn-primary {
 
   color: gold !important;
   background-color: navy !important;
+  margin-bottom: 10px;
 }
 
 .layout_padding {
