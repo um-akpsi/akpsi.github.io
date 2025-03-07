@@ -52,6 +52,40 @@
 
 
 <body>
+  <!-- corporate sponsorship section-->
+
+  <section class="corporate-packet layout_padding" style="background-color: black">
+    <div class="container">
+
+      <br>
+      <br>
+
+      <h1>Corporate Sponsorship Form</h1>
+
+
+
+
+
+
+  
+
+
+
+      <!--Administrative Director-->
+
+      <div id="ad" class="role-box">
+        <h3>Introducing the Corporate Sponsorship Packet!</h3>
+
+        <p>
+          We're excited to bring this resource to you. We're currently working on this packet and will have it available to you soon.
+        </p>
+
+        </div>
+
+    </div>
+  </section>
+
+  <!-- end corporate sponsorship section-->
 
  <div class="password-container">
 
@@ -64,12 +98,12 @@
     <br>
 
 
-    <h2 id="password-statement">Hi Brother. Enter your password to view all resources. </h2>
+    <h2 id="password-statement">Hi Brother. Enter your UM email address to gain access to important Chapter information. </h2>
     <br>
     <br>
 
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="validatePassword()">Submit</button>
+    <input type="email" id="email" placeholder="example@miami.edu">
+    <button onclick="validateEmail()">Log In</button>
 
     <br>
     <br> 
@@ -108,7 +142,7 @@
             <div id="myNav" class="overlay">
               <div class="overlay-content">
                 <a href="index.html">Current Brothers</a>
-                <a href="vpm.html">Future Brothers</a>
+                <a href="corporate-packet.html">Corporate Packet</a>
               </div>
             </div>
           </div>
@@ -143,7 +177,7 @@
             You'll find information pertaining to involvement of the chapter, the latest calendar, and available forms to complete from the executive board. 
           </p>
 
-          <p>This page is for active brothers of Alpha Kappa Psi. If you're a future brother, please visit <a href="vpm.html">the Beta Pi website for future brothers</a>.</p>
+          <p>This page is for active brothers of Alpha Kappa Psi. 
 
           <p><strong>If you want to view resources from a specific e-board position, choose from the link below. Otherwise, scroll down to view all resources.</p>
           </strong></p>
@@ -570,7 +604,7 @@
 
   <!-- brother spotlight section -->
 
-  <section class="client_section layout_padding" >
+  <!-- <section class="client_section layout_padding" >
 
     <div class="container">
       <div class="heading_container">
@@ -659,7 +693,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- end brother spotlight section -->
 
@@ -688,7 +722,7 @@
             </h4>
             <div class="info_links_menu">
               <a href="index.html">Current Brothers</a>
-              <a href="vpm.html">Future Brothers</a>
+              <a href="corporate-packet.html">Corporate Packet</a>
             </div>
           </div>
         </div>
@@ -757,16 +791,35 @@
   <script src="js/custom.js"></script>
 
   <script>
-    function validatePassword() {
-      const password = document.getElementById('password').value;
-      const correctPassword = 'akpsi2025'; //key
+    function validateEmail() {
+      const enteredEmail = document.getElementById('email').value.trim().toLowerCase();
+  
+      // List of approved emails
+      const approvedEmails = [
+        "bxj293@miami.edu",
+        "sxh2939@miami.edu",
+        "smg2005@miami.edu",
+        "sig62@miami.edu",
+        "vsw11@miami.edu",
+        "rsp151@miami.edu",
+        "mmw202@miami.edu",
+        "kbq2@miami.edu",
+        "ivl6@miami.edu",
+        "bdevolve@miami.edu",
+        "bjt82@miami.edu",
+        "ask77639@miami.edu",
 
-      if (password === correctPassword) {
+
+
+
+      ];
+  
+      if (approvedEmails.includes(enteredEmail)) {
         document.querySelector('.password-container').style.display = 'none';
         document.getElementById('loadingMessage').style.display = 'block';
-
+  
         setTimeout(() => {
-          document.getElementById('loadingMessage').style.display = 'none'; 
+          document.getElementById('loadingMessage').style.display = 'none';
 
           // pages to unlock
 
@@ -785,6 +838,8 @@
           document.querySelector('.info_section').style.display = 'block';
 
           document.querySelector('.footer_section').style.display = 'block';
+
+          document.querySelector('.corporate-packet').style.display = 'block';
 
         }, 1000);
       } else {

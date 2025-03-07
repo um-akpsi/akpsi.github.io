@@ -13,7 +13,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Corporate Sponsorship </title>
+  <title>Corporate Sponsorship</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
@@ -48,35 +48,35 @@
 
 
 <body>
+    <div class="password-container">
 
-<div class="password-container">
-
-    <br>
-    <br> 
-    <br>
-    <br>
-    <br> 
-    <br>
-
-
-
-    <h2 id="password-statement">Hi Future Brother. Enter your password to access your Bridge To Brotherhood materials.</h2>
-    <br>
-    <br>
-
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="validatePassword()">Submit</button>
-
-    <br>
-    <br> 
-    <br>
-    <br>
-    <br> 
-    <br>
-
- 
-
-  </div>
+        <br>
+        <br> 
+        <br>
+        <br>
+        <br> 
+        <br>
+        <br>
+    
+    
+        <h2 id="password-statement">Hi Brother. Enter your UM email address to gain access to important Chapter information. </h2>
+        <br>
+        <br>
+    
+        <input type="email" id="email" placeholder="example@miami.edu">
+        <button onclick="validateEmail()">Log In</button>
+    
+        <br>
+        <br> 
+        <br>
+        <br>
+        <br> 
+        <br>
+        <br>
+    
+    
+    
+      </div> 
 
 <div id="loadingMessage" style="display: none; text-align: center; margin-top: 40px;">
     <h2>Loading you to the hub...</h2>
@@ -103,7 +103,7 @@
             <div id="myNav" class="overlay">
               <div class="overlay-content">
                 <a href="index.html">Current Brothers</a>
-                <a href="vpm.html">Future Brothers</a>
+                <a href="corporate-packet.html">Corporate Packet</a>
               </div>
             </div>
           </div>
@@ -130,15 +130,15 @@
           <h1>
 
 
-            Hi Future Brother. Welcome to Alpha Kappa Psi.<br>
+            Welcome to your Corporate Sponsorship Materials.<br>
             <br>
           </h1>
-          <p> Check out your requirements and resources below. If you have any questions, please reach out to your Vice President of Membership (VPM).
+          <p> Intro text. 
 
           </p>
 
           <p>
-            This page is for incoming members to the Alpha Kappa Psi | Beta Pi chapter. If you're an active brother, please visit the <a href="https://www.umakpsi.com">Beta Pi website for brothers</a>.
+            This page is for those who are an active brother of Alpha Kappa Psi. Please do not access this website if you're not an active brother.  
           </p>
         </div>
       </div>
@@ -155,41 +155,25 @@
       
 
         <div id="vpm" class="role-box">
-          <h3>Your VPMs for Spring 2025</h3>
-          <p>
-            Welcome future brothers! We're your VPMs, Bailey Topher and Mia Wallis. We'll be your main point of contact throughout the pledge process.
-
-          </p>
-          <a href="form_vpf.html" class="btn btn-primary">Google Classroom</a>
-
+          <h3>Corporate Sponsorship Packet</h3>
           
-          <a href="form_vpf.html" class="btn btn-primary">Pay your Dues</a>
-
-          <a href="form_vpf.html" class="btn btn-primary">Practice Test - Coming Soon</a>
-
         </div>
 
 
         <div id="rituals" class="role-box">
-          <h3>From the Director of Rituals (DOR)</h3>
+          <h3>Corporate Sponsorship Folder</h3>
           <p>
-            You will attend mandatory rituals throughout the pledge process. These rituals are a time for you to reflect on your decision to join Alpha Kappa Psi and to learn more about our values and history. View upcoming ritual dates below.
+            You may only access this folder if you're an active brother of Alpha Kappa Psi. You must be signed into your UM email to access this folder. 
 
-            <p>Induction: <strong>Feburary 11, 9pm</strong></p>
+
 
             <br>
+            <br> 
+
+            <a href="https://drive.google.com/drive/folders/1" class="btn btn-primary">View Study Bank</a>
 
           </p>
 
-          <p><strong>Dress Guidelines</strong>
-        
-             <ul>
-              <li>Business Professional Attire</li>
-              <li>No jeans, t-shirts, or sneakers</li>
-              <li>If you have any questions about attire, please reach out to your VPM</li>
-            
-            </ul>
-          </p>
         </div>
 
       </div>
@@ -227,7 +211,7 @@
 
   <!-- brother spotlight section -->
 
-  <section class="client_section layout_padding" style="display: none;">
+  <!-- <section class="client_section layout_padding" style="display: none;">
 
     <div class="container">
       <div class="heading_container">
@@ -280,7 +264,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- end brother spotlight section -->
 
@@ -309,7 +293,7 @@
             </h4>
             <div class="info_links_menu">
               <a href="index.html">Current Brothers</a>
-              <a href="vpm.html">Future Brothers</a>
+              <a href="corporate-packet.html">Corporate Packet</a>
             </div>
           </div>
         </div>
@@ -380,16 +364,35 @@
   <script src="js/custom.js"></script>
 
   <script>
-    function validatePassword() {
-      const password = document.getElementById('password').value;
-      const correctPassword = 'newakpsi2025'; //key
+    function validateEmail() {
+      const enteredEmail = document.getElementById('email').value.trim().toLowerCase();
+  
+      // List of approved emails
+      const approvedEmails = [
+        "bxj293@miami.edu",
+        "sxh2939@miami.edu",
+        "smg2005@miami.edu",
+        "sig62@miami.edu",
+        "vsw11@miami.edu",
+        "rsp151@miami.edu",
+        "mmw202@miami.edu",
+        "kbq2@miami.edu",
+        "ivl6@miami.edu",
+        "bdevolve@miami.edu",
+        "bjt82@miami.edu",
+        "ask77639@miami.edu",
 
-      if (password === correctPassword) {
+
+
+
+      ];
+  
+      if (approvedEmails.includes(enteredEmail)) {
         document.querySelector('.password-container').style.display = 'none';
         document.getElementById('loadingMessage').style.display = 'block';
-
+  
         setTimeout(() => {
-          document.getElementById('loadingMessage').style.display = 'none'; 
+          document.getElementById('loadingMessage').style.display = 'none';
 
           // pages to unlock
 
